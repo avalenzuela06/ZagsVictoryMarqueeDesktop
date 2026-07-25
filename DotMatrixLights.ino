@@ -9,20 +9,20 @@
 // Define hardware type, size, and output pins:
 #define HARDWARE_TYPE MD_MAX72XX::FC16_HW
 #define MAX_DEVICES 8
-#define CS_PIN 13
+#define CS_PIN 9 //13
 
 // Create a new instance of the MD_Parola class with hardware SPI connection:
 //MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, CS_PIN, MAX_DEVICES);
 
 // Setup for software SPI:
-#define MATRIX_PIN 14
+#define MATRIX_PIN 7 //14
 #define CLK_PIN 41
 MD_Parola myDisplay = MD_Parola(HARDWARE_TYPE, MATRIX_PIN, CLK_PIN, CS_PIN, MAX_DEVICES);
 String phrases[] = {"Welcome to Gonzaga University!", "Zags Win!!!!", "Congrats Class of 2026!", "Welcome to Freshman Orientation!", "Thank you Domatas Sabonis!"};
 int numPhrases = 4;
 
 //ports for Heart LED
-#define heartLight 20
+#define heartLight 10
 
 //LED Strip Lights
 #include <FastLED.h>
